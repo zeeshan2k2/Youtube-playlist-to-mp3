@@ -1,5 +1,5 @@
 # Youtube-playlist-to-mp3.
-this program will convert youtube playlist to mp3 and store it in a file. For now this code only works on mac os I'm working on a code that'll work on windows
+this program will convert youtube playlist to mp3 and store it in a file. For now this code only works on mac os.
 
 
 1. download adguard.crx the file is given in the repository
