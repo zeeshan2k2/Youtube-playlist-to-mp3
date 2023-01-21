@@ -8,7 +8,8 @@ this program will convert youtube playlist to mp3 and store it in a file. For no
 
 3. copy main-for-windows.py or main-for-pac.py code and make sure the packages are installed.
 
-4. change the path in line 82 -- (os.chdir("paste your downloads folder path here")  (for mac os)
-5. change the path in line 86 -- (os.chdir("paste your downloads folder path here")  (for windows)
+4. for mac os script change the path in line 82 -- (os.chdir("paste your downloads folder path here") 
+
+5. for windows script change the path in line 86 -- (os.chdir("paste your downloads folder path here")  
 
 save all the files mentioned above in a folder(i.e adguard.crx, your version of chromedriver and the script file).
