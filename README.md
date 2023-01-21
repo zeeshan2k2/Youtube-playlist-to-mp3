@@ -11,7 +11,7 @@ this program will convert youtube playlist to mp3 and store it in a file. For no
 
 4. for mac os script change the path in line 33 -- chrome_options.add_extension("paste your adguard.crx file path here")
 5. for mac os script change the path in line 38 -- browser = webdriver.Chrome("paste your chromedriver file path here", options=chrome_options)
-6. for mac os script change the path in line 82 -- (os.chdir("paste your downloads folder path here") 
+6. for mac os script change the path in line 82 -- os.chdir("paste your downloads folder path here") 
 
 
 
