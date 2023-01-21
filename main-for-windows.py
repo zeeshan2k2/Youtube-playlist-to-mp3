@@ -31,14 +31,15 @@ start_time = time.monotonic()
 # a function that'll add adblocker to chrome driver and then download all the mp3s one by one
 def dowmp3():
     chrome_options = ChromeOptions()
-    chrome_options.add_extension("adguard.crx")
-
+    # paste your adguard.crx file path below
+    chrome_options.add_extension(r"C:\Users\Nouman Waheed\Desktop\youtube playlist to mp3\adguard.crx")
     print("Please wait the download will begin shortly...")
     print()
 
     # browser = webdriver.Chrome(r"chromedriver.exe", options=chrome_options)
 
-    service = Service("chromedriver.exe")
+    # paste your chromedriver path below
+    service = Service(r"C:\Users\Nouman Waheed\Desktop\youtube playlist to mp3\chromedriver.exe")
     browser = webdriver.Chrome(service=service, options=chrome_options)
 
     time.sleep(14)
@@ -49,19 +50,19 @@ def dowmp3():
         browser.get("https://yt5s.io/en20/youtube-to-mp3")
 
         button0 = browser.find_element(By.XPATH, '//input[@id="s_input"]')
-        time.sleep(0.2)       # this is really important takes into account how many secs it will take to load the page
+        time.sleep(0.2)  # this is really important takes into account how many secs it will take to load the page
 
         button0.send_keys(i)
 
         button = browser.find_element(By.XPATH, '//button[@class="btn-red"]')
         button.click()
 
-        time.sleep(2.5)     # this is really important takes into account how many secs it will take to load the button
+        time.sleep(2.5)  # this is really important takes into account how many secs it will take to load the button
 
         button1 = browser.find_element(By.XPATH, '//button[@id="btn-action"]')
         button1.click()
 
-        time.sleep(2.5)     # this is really important takes into account how many secs it will take to load the button
+        time.sleep(2.5)  # this is really important takes into account how many secs it will take to load the button
 
         button2 = browser.find_element(By.XPATH, '//*[@id="asuccess"]')
         button2.click()
@@ -72,7 +73,7 @@ def dowmp3():
 
     print("Please wait it will be downloaded shortly...")
 
-    time.sleep(10)    # this is the more than time taken to finish the last download to prevent it from error
+    time.sleep(10)  # this is the more than time taken to finish the last download to prevent it from error
 
 
 dowmp3()
