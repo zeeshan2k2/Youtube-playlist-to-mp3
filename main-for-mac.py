@@ -29,13 +29,13 @@ start_time = time.monotonic()
 # a function that'll add adblocker to chrome driver and then download all the mp3s one by one
 def dowmp3():
     chrome_options = ChromeOptions()
-    chrome_options.add_extension("adguard.crx")
-
+    chrome_options.add_extension("/Users/zeeshanwaheed/Desktop/PycharmProjects1/Youtube playlist to mp3/adguard.crx")
+    #paste your adguard.crx file path above
     print("Please wait the download will begin shortly...")
     print()
 
-    browser = webdriver.Chrome("./chromedriver", options=chrome_options)
-
+    browser = webdriver.Chrome("/Users/zeeshanwaheed/Desktop/PycharmProjects1/Youtube playlist to mp3/chromedriver", options=chrome_options)
+    #paste your chromedriver path above
     time.sleep(14)
 
     n = 0
