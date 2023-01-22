@@ -1,5 +1,5 @@
 # Youtube-playlist-to-mp3.
-This program will convert youtube playlist to mp3 and store it in a file (python 3.10 required). 
+This program will convert youtube playlist to mp3 and store it in a file (python 3.10). 
 Note: ideally this should work great if the videos on your playlist are about 1 to 6 min long(it was initially made to convert songs), but if you want to convert longer videos(i.e podcasts etc) you'll have to increase and adjust time.sleep(n).                                                                                                                                                                                                             
 1. download adguard.crx the file is given in the repository 
 
@@ -11,3 +11,5 @@ Note: ideally this should work great if the videos on your playlist are about 1 
 9. for windows script change the path in line 48 -- chrome_options.add_extension(r"paste your adguard.crx file path here")
 10. for windows script change the path in line 55 -- service = Service(r"paste your chromedriver file path here")
 11. for windows script change the path in line 100 -- os.chdir("paste your downloads folder path here") 
+
+after following all these steps if it shows an error because of line 55 and 56(browser = webdriver.Chrome(service=service, options=chrome_options), then comment those lines and remove comment from line 52 and remember to put your chrome driver path(browser = webdriver.Chrome(r"paste chrome driver path here", options=chrome_options), that should resolve any issue.
