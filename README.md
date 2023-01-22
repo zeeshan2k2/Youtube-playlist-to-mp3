@@ -15,6 +15,6 @@ this program will convert youtube playlist to mp3 and store it in a file. For no
 
 
 
-9. for windows script change the path in line 35 -- chrome_options.add_extension(r"paste your adguard.crx file path here")
-10. for windows script change the path in line 42 -- service = Service(r"paste your chromedriver file path here")
-11. for windows script change the path in line 86 -- os.chdir("paste your downloads folder path here") 
+9. for windows script change the path in line 48 -- chrome_options.add_extension(r"paste your adguard.crx file path here")
+10. for windows script change the path in line 55 -- service = Service(r"paste your chromedriver file path here")
+11. for windows script change the path in line 100 -- os.chdir("paste your downloads folder path here") 
