@@ -24,6 +24,19 @@ print()
 print("There are", length, "videos in this playlist.")
 print()
 
+#this will ask the user if they want to download the entire playlist, first few of last few.
+how_many_vids = input("Do you want to download (type the corresponding number) \n1. first few \n2. last few \n3. all "
+                      "of them\n:")
+
+if how_many_vids == "1":
+    num_of_vids = int(input("How many videos do you want to convert from the start of this playlist? \n:"))
+    video_links1 = video_links[:-(length - num_of_vids)]
+if how_many_vids == "2":
+    num_of_vids = int(input("How many videos do you want to convert from the end of this playlist? \n:"))
+    video_links1 = video_links[int(length - num_of_vids):length]
+elif how_many_vids == "3":
+    video_links1 = video_links
+
 # this is to note time
 start_time = time.monotonic()
 
@@ -46,7 +59,7 @@ def dowmp3():
 
     n = 0
 
-    for i in video_links:
+    for i in video_links1:
         browser.get("https://yt5s.io/en20/youtube-to-mp3")
 
         button0 = browser.find_element(By.XPATH, '//input[@id="s_input"]')
@@ -69,7 +82,7 @@ def dowmp3():
 
         n = n + 1
         # this works as a progress bar updates with how many have been downloaded from the playlist
-        print(n, "out of", length, "done")
+        print(n, "out of", len(video_links1), "done")
 
     print("Please wait it will be downloaded shortly...")
 
@@ -106,4 +119,4 @@ for file in os.listdir():
 
 # tells us how much time it took to download and rename the files.
 print()
-print("It took ", timedelta(seconds=end_time - start_time), "to download", length, "songs")
+print("It took ", timedelta(seconds=end_time - start_time), "to download", len(video_links1), "songs")
