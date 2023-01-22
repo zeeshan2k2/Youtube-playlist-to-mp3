@@ -23,8 +23,8 @@ print("There are", length, "videos in this playlist.")
 print()
 
 #this will ask the user if they want to download the entire playlist, first few of last few.
-how_many_vids = input("Do you want to download (type the corresponding number) \n1. first few \n2. last few \n3. all "
-                      "of them\n:")
+how_many_vids = input("Do you want to download? \n1. first few \n2. last few \n3. all "
+                      "of them\n(type the corresponding number)\n:")
 
 if how_many_vids == "1":
     num_of_vids = int(input("How many videos do you want to convert from the start of this playlist? \n:"))
