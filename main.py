@@ -70,12 +70,12 @@ def dowmp3():
         button = browser.find_element(By.XPATH, '//button[@class="btn-red"]')
         button.click()
 
-        time.sleep(2.5)  # this is really important takes into account how many secs it will take to load the button
+        time.sleep(3)  # this is really important takes into account how many secs it will take to load the button
 
         button1 = browser.find_element(By.XPATH, '//button[@id="btn-action"]')
         button1.click()
 
-        time.sleep(2.5)  # this is really important takes into account how many secs it will take to load the button
+        time.sleep(3)  # this is really important takes into account how many secs it will take to load the button
 
         button2 = browser.find_element(By.XPATH, '//*[@id="asuccess"]')
         button2.click()
@@ -86,7 +86,7 @@ def dowmp3():
 
     print("Please wait it will be downloaded shortly...")
 
-    time.sleep(10)  # this is the more than time taken to finish the last download to prevent it from error
+    time.sleep(25)  # this is the more than time taken to finish the last download to prevent it from error
 
 
 dowmp3()
